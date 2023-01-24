@@ -2,7 +2,7 @@ import NewToDoForm from "./NewToDoForm";
 
 import { useState } from "react";
 
-const NewToDo = () => {
+const NewToDo = (props) => {
   const [formToDo, setFormToDo] = useState(false);
 
   const addFormStateHandler = (event) => {
@@ -13,17 +13,21 @@ const NewToDo = () => {
     setFormToDo(false);
   };
 
+  const addToDoHandler = (newToDo) => {
+    props.onAddToDo(newToDo);
+  };
+
   return (
     <div>
       {formToDo === false && (
-        <button
-          onClick={addFormStateHandler}
-          onCloseForm={stopFormStateHandler}
-        >
-          Add New To-Do
-        </button>
+        <button onClick={addFormStateHandler}>Add New To-Do</button>
       )}
-      {formToDo === true && <NewToDoForm />}
+      {formToDo === true && (
+        <NewToDoForm
+          onCloseForm={stopFormStateHandler}
+          onAddToDo={addToDoHandler}
+        />
+      )}
     </div>
   );
 };
