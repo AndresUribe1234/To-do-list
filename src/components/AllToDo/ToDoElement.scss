@@ -1,0 +1,25 @@
+.list-element-container {
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  width: 300px;
+  list-style-type: none;
+}
+
+.toDo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    padding: 10px;
+    width: 250px;
+    overflow: hidden;
+  }
+
+  div {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+}

@@ -9,14 +9,10 @@ const NewToDoForm = (props) => {
 
   const addToDo = (event) => {
     event.preventDefault();
-    const newToDo = { toDo: toDo, dateUTC: new Date() };
+    const newToDo = { toDo: toDo, dateUTC: new Date(), id: Math.random() };
     props.onAddToDo(newToDo);
-
-    // // Local time to Copenhagen time
-    // const a=new Date() -> saves date UTC
-    // console.log(a.toLocaleString("en-US", { timeZone: "Europe/Copenhagen" }));
-    // // Return time on utc
-    // console.log(a.toISOString("en-US"));
+    setToDo("");
+    props.onCloseForm();
   };
 
   return (

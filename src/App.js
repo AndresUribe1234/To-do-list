@@ -17,14 +17,24 @@ function App() {
       return [data, ...prevToDo];
     });
   };
+
+  const removeToDoHandler = (toDoToRemove) => {
+    setToDo((prevToDo) => {
+      const indexToRemove = prevToDo
+        .map((ele) => ele.id)
+        .findIndex((ele) => ele === toDoToRemove);
+      prevToDo.splice(indexToRemove, 1);
+      return [...prevToDo];
+    });
+  };
+
   localStorage.setItem("toDos", JSON.stringify(toDo));
   console.log(toDo);
 
   return (
     <div className="App">
-      <div>To-Do list</div>
       <NewToDo onAddToDo={newToDoHandler} />
-      <ToDo />
+      <ToDo listOfToDo={toDo} onRemove={removeToDoHandler} />
     </div>
   );
 }
