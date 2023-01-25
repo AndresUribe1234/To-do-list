@@ -29,7 +29,6 @@ function App() {
   };
 
   localStorage.setItem("toDos", JSON.stringify(toDo));
-  console.log(toDo);
 
   return (
     <div className="App">
