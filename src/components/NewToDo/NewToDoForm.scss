@@ -1,0 +1,15 @@
+@import "./../../config";
+
+button {
+  @extend %btn;
+  min-width: 80px;
+}
+
+input {
+  @extend %input;
+}
+
+input.invalid {
+  background-color: salmon;
+  border: transparent;
+}

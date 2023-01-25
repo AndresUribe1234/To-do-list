@@ -1,0 +1,27 @@
+%btn {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 3px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+
+%input {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 3px;
+  text-align: center;
+}
+
+%container {
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  width: 300px;
+  list-style-type: none;
+}

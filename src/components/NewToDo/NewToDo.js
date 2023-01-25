@@ -1,4 +1,5 @@
 import NewToDoForm from "./NewToDoForm";
+import "./NewToDo.scss";
 
 import { useState } from "react";
 
@@ -18,7 +19,7 @@ const NewToDo = (props) => {
   };
 
   return (
-    <div>
+    <div className="new-todo-container">
       {formToDo === false && (
         <button onClick={addFormStateHandler}>Add New To-Do</button>
       )}

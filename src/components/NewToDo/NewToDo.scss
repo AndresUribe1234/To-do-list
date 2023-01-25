@@ -1,0 +1,6 @@
+@import "./../../config";
+
+.new-todo-container {
+  @extend %container;
+  padding: 10px;
+}
